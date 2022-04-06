@@ -1,0 +1,40 @@
+{
+  "name": "colorize-node",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "A lightweight library to color Node.js terminal output.",
+  "author": "Jörn Spangenberg <me@jrson.de> (https://jrson.de)",
+  "homepage": "https://jrson.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrson83/colorize-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jrson83/colorize-node/issues"
+  },
+  "keywords": [
+    "color",
+    "colorize",
+    "console",
+    "node",
+    "node.js",
+    "process",
+    "stdout",
+    "terminal"
+  ],
+  "type": "module",
+  "main": "colorize.js",
+  "types": "colorize.d.ts",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "format:check": "prettier --check colorize.js colorize.d.ts tests/test.js",
+    "format": "prettier --write colorize.js colorize.d.ts tests/test.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2"
+  }
+}
