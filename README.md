@@ -1,5 +1,8 @@
 # colorize-node
 
+![npm](https://img.shields.io/npm/v/colorize-node)
+![node-current](https://img.shields.io/node/v/colorize-node)
+
 > A lightweight library to color Node.js terminal output (it is neither minified nor gzipped).
 
 - No dependecies

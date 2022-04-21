@@ -1,6 +1,6 @@
 {
   "name": "colorize-node",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "A lightweight library to color Node.js terminal output.",
   "author": "Jörn Spangenberg <me@jrson.de> (https://jrson.de)",
