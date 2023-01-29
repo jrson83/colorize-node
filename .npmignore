@@ -1,6 +1,0 @@
-node_modules
-tests
-.editorconfig
-.prettierrc
-jest.config.js
-package-lock.json

@@ -1,17 +1,7 @@
 {
   "name": "colorize-node",
-  "version": "0.2.0",
-  "license": "MIT",
+  "version": "0.3.0",
   "description": "A lightweight library to color Node.js terminal output.",
-  "author": "Jörn Spangenberg <me@jrson.de> (https://jrson.de)",
-  "homepage": "https://jrson.de",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jrson83/colorize-node.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jrson83/colorize-node/issues"
-  },
   "keywords": [
     "color",
     "colorize",
@@ -22,19 +12,52 @@
     "stdout",
     "terminal"
   ],
-  "type": "module",
-  "main": "colorize.js",
-  "types": "colorize.d.ts",
+  "homepage": "https://jrson.me",
+  "bugs": {
+    "url": "https://github.com/jrson83/colorize-node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrson83/colorize-node.git"
+  },
+  "license": "MIT",
+  "author": "Jörn Spangenberg <github@jrson.me> (https://jrson.me)",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.mjs"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "clean": "rm -rf dist",
+    "fmt": "rome format src test --write",
+    "lint": "rome check src test",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "rome": "^11.0.0",
+    "tsx": "^3.12.2",
+    "typescript": "^4.9.4",
+    "unbuild": "^1.1.1",
+    "vitest": "^0.28.3"
+  },
   "engines": {
     "node": ">=12.0.0"
   },
-  "scripts": {
-    "format:check": "prettier --check colorize.js colorize.d.ts tests/test.js",
-    "format": "prettier --write colorize.js colorize.d.ts tests/test.js",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
-  },
-  "devDependencies": {
-    "jest": "^29.3.1",
-    "prettier": "^2.6.2"
+  "publishConfig": {
+    "access": "public"
   }
 }

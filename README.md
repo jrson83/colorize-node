@@ -8,11 +8,9 @@
 - No dependecies
 - TypeScript support
 - Node >= 12
-- 179 bytes (minified & gzipped)
+- 208 bytes (minified & gzipped)
 
 ## Installation
-
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
 
 ```sh
 npm install colorize-node
@@ -26,6 +24,8 @@ import colorize from 'colorize-node'
 colorize.red('This string is red')
 
 colorize.green(colorize.bold('This string is green & bold'))
+
+colorize.bgGreen(`This string has green background and ${colorize.bold('this string is bold')}`)
 ```
 
 ## Supported colors
