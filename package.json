@@ -30,7 +30,7 @@
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": ["dist", "src", "CHANGELOG.md", "README.md"],
+  "files": ["dist", "src"],
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "unbuild",
