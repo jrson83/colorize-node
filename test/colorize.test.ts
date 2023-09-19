@@ -1,5 +1,5 @@
-import colorize from '../src'
 import { assert, describe, it } from 'vitest'
+import colorize from '../src'
 
 /**
  * The tests are based on picocolors:
