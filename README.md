@@ -8,7 +8,7 @@
 - No dependecies
 - TypeScript support
 - Node >= 12
-- 220 bytes (minified & gzipped)
+- 207 bytes (minified & gzipped)
 
 ## Installation
 
