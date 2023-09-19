@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## v0.4.0 - 2023-09-19
+## v0.4.1 - 2023-09-19
 
 - update all dependencies
 
