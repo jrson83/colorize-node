@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## v0.5.0 - unreleased
+## v0.5.0 - 2023-12-23
 
 - bump minimum node version to [18.12.0](https://nodejs.org/en/blog/release/v18.12.0) (node.js 18+ is now required)
 - fix package manager install warning
