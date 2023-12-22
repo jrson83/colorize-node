@@ -5,7 +5,7 @@
 
 > A lightweight library to color Node.js terminal output.
 
-- Zero dependecies
+- Zero dependencies
 - TypeScript support
 - Node >= 18.12.0
 - ESM bundle size: 193 bytes / CJS: 200 bytes (minified & gzipped)
