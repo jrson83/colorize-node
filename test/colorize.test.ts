@@ -1,5 +1,6 @@
-import { assert, describe, it } from 'vitest'
-import colorize from '../src'
+import { equal } from 'node:assert/strict'
+import { describe, it } from 'node:test'
+import { colorize } from '../src'
 
 /**
  * The tests are based on picocolors:
@@ -56,7 +57,7 @@ const COLORS = {
 describe('colorize test', () => {
   it('should match colors', () => {
     for (let format in COLORS) {
-      assert.equal(
+      equal(
         colorize[format]('string'),
         `${COLORS[format][0]}string${COLORS[format][1]}`
       )
@@ -64,41 +65,37 @@ describe('colorize test', () => {
   })
 
   it('should wrap properly', () => {
-    assert.equal(
+    equal(
       colorize.red(colorize.bold('==TEST==')),
       `${COLORS.red[0]}${COLORS.bold[0]}==TEST==${COLORS.bold[1]}${COLORS.red[1]}`
     )
   })
 
   it('should wrap complex cases properly', () => {
-    assert.equal(
+    equal(
       colorize.bold(
         colorize.yellow(colorize.bgRed(colorize.italic('==TEST==')))
       ),
       `${COLORS.bold[0]}${COLORS.yellow[0]}${COLORS.bgRed[0]}${COLORS.italic[0]}==TEST==${COLORS.italic[1]}${COLORS.bgRed[1]}${COLORS.yellow[1]}${COLORS.bold[1]}`
     )
 
-    assert.equal(
+    equal(
       colorize.cyan(colorize.bold(colorize.underline('==TEST=='))),
       `${COLORS.cyan[0]}${COLORS.bold[0]}${COLORS.underline[0]}==TEST==${COLORS.underline[1]}${COLORS.bold[1]}${COLORS.cyan[1]}`
     )
   })
 
-  it('should ThrowError', () => {
+  it('should ThrowError using non-string input', () => {
     // @ts-expect-error: Expected 1 arguments, but got 0.ts(2554)
-    assert.equal(colorize.red(), `${COLORS.red[0]}undefined${COLORS.red[1]}`)
-    assert.equal(
-      colorize.red(undefined),
-      `${COLORS.red[0]}undefined${COLORS.red[1]}`
-    )
-    assert.equal(colorize.red(0), `${COLORS.red[0]}0${COLORS.red[1]}`)
-    assert.equal(colorize.red(NaN), `${COLORS.red[0]}NaN${COLORS.red[1]}`)
-    assert.equal(colorize.red(null), `${COLORS.red[0]}null${COLORS.red[1]}`)
-    assert.equal(colorize.red(true), `${COLORS.red[0]}true${COLORS.red[1]}`)
-    assert.equal(colorize.red(false), `${COLORS.red[0]}false${COLORS.red[1]}`)
-    assert.equal(
-      colorize.red(Infinity),
-      `${COLORS.red[0]}Infinity${COLORS.red[1]}`
-    )
+    equal(colorize.red(), `${COLORS.red[0]}undefined${COLORS.red[1]}`)
+    equal(colorize.red(undefined), `${COLORS.red[0]}undefined${COLORS.red[1]}`)
+    equal(colorize.red(0), `${COLORS.red[0]}0${COLORS.red[1]}`)
+    equal(colorize.red(NaN), `${COLORS.red[0]}NaN${COLORS.red[1]}`)
+    equal(colorize.red(null), `${COLORS.red[0]}null${COLORS.red[1]}`)
+    // @ts-expect-error: Argument of type 'true' is not assignable to parameter of type 'string | number | null | undefined'.ts(2345)
+    equal(colorize.red(true), `${COLORS.red[0]}true${COLORS.red[1]}`)
+    // @ts-expect-error: Argument of type 'false' is not assignable to parameter of type 'string | number | null | undefined'.ts(2345)
+    equal(colorize.red(false), `${COLORS.red[0]}false${COLORS.red[1]}`)
+    equal(colorize.red(Infinity), `${COLORS.red[0]}Infinity${COLORS.red[1]}`)
   })
 })

@@ -1,20 +1,72 @@
-import { stdout } from 'node:process'
 import { inspect } from 'node:util'
 
-type Initializer<T> = T | ((str: string) => T)
-
 const colors = inspect.colors
-const hasNoColors = stdout.isTTY && !stdout.hasColors()
+const stdout = process.stdout
+
+const noColorSupport = stdout.isTTY && !stdout.hasColors()
+
+// biome-ignore lint/suspicious/noConstEnum: removed during compilation
+const enum Colors {
+  reset,
+  bold,
+  dim,
+  italic,
+  underline,
+  blink,
+  inverse,
+  hidden,
+  strikethrough,
+  doubleunderline,
+  black,
+  red,
+  green,
+  yellow,
+  blue,
+  magenta,
+  cyan,
+  white,
+  bgBlack,
+  bgRed,
+  bgGreen,
+  bgYellow,
+  bgBlue,
+  bgMagenta,
+  bgCyan,
+  bgWhite,
+  framed,
+  overlined,
+  gray,
+  redBright,
+  greenBright,
+  yellowBright,
+  blueBright,
+  magentaBright,
+  cyanBright,
+  whiteBright,
+  bgGray,
+  bgRedBright,
+  bgGreenBright,
+  bgYellowBright,
+  bgBlueBright,
+  bgMagentaBright,
+  bgCyanBright,
+  bgWhiteBright,
+}
+
+type Colorize = {
+  [k in keyof typeof Colors]: (
+    input: string | number | null | undefined
+  ) => string
+}
 
 const colorize = Object.fromEntries(
   Object.entries(colors).map(([color, code]) => [
     color,
-    <T>(str: string | Initializer<T> | undefined) => {
-      if (!code) return
-      if (hasNoColors) return str
+    (str) => {
+      if (noColorSupport || !code) return str
       return `\x1b[${code[0]}m${str}\x1b[${code[1]}m`
     },
   ])
-)
+) as Colorize
 
-export default colorize
+export { colorize }

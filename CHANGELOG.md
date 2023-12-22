@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.5.0 - unreleased
+
+- bump minimum node version to [18.12.0](https://nodejs.org/en/blog/release/v18.12.0) (node.js 18+ is now required)
+- fix package manager install warning
+- fix esm exports, now supports cjs & esm exports
+- replace default with named export to avoid forcing `allowSyntheticDefaultImports` flag & improve cjs compatibility
+- remove redundant `stdout` import from `node:process`
+- improve return conditions
+- improve types to infer color names, fixes chain autocompletes in IDE
+- enable compiling typescript declarations
+- update dependencies
+- replace unbuild with pkgroll
+- replace vitest with native node.js test runner
+- refactor tests, update workflow node version
+
 ## v0.4.1 - 2023-09-19
 
 - update all dependencies

@@ -5,21 +5,22 @@
 
 > A lightweight library to color Node.js terminal output.
 
-- No dependecies
+- Zero dependecies
 - TypeScript support
-- Node >= 12
-- 207 bytes (minified & gzipped)
+- Node >= 18.12.0
+- ESM bundle size: 193 bytes / CJS: 200 bytes (minified & gzipped)
 
 ## Installation
 
 ```sh
-npm install colorize-node
+npm install --save-dev colorize-node
 ```
 
 ## Usage
 
 ```js
-import colorize from 'colorize-node'
+// use named export, no default export
+import { colorize } from 'colorize-node'
 
 colorize.red('This string is red')
 
