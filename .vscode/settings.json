@@ -1,7 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports.biome": true
+    "source.organizeImports.biome": "explicit"
   },
   "files.insertFinalNewline": true,
   "[json]": {
@@ -21,14 +21,5 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "vscode.markdown-language-features"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
-  "[less]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   }
 }
