@@ -60,4 +60,4 @@ Taken from the [Node.js docs](https://nodejs.org/api/util.html#customizing-utili
 
 This project is under MIT license.
 
-The `test.js` file bundles portions of [picocolors (ISC License)](https://github.com/alexeyraspopov/picocolors).
+The `colorize.test.ts` file bundles portions of [picocolors (ISC License)](https://github.com/alexeyraspopov/picocolors).
