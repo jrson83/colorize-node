@@ -22,12 +22,6 @@
   },
   "packageRules": [
     {
-      "description": "Automatically merge minor and patch-level updates",
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "matchDepTypes": ["dependencies"],
-      "automerge": true
-    },
-    {
       "description": "Automatically merge devDependencies updates",
       "matchDepTypes": ["devDependencies"],
       "matchPackagePatterns": [
@@ -35,10 +29,9 @@
         "@types/node",
         "husky",
         "nano-staged",
+        "pkgroll",
         "tsx",
-        "typescript",
-        "unbuild",
-        "vitest"
+        "typescript"
       ],
       "automerge": true
     }
