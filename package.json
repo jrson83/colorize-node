@@ -36,7 +36,9 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.cts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rm -rf dist",
     "dev": "tsx src/index.ts",
@@ -48,7 +50,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.5.3",
-    "@types/node": "^20.6.2",
+    "@types/node": "^20.11.16",
     "husky": "^9.0.10",
     "nano-staged": "^0.8.0",
     "pkgroll": "^2.0.1",
