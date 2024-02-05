@@ -44,12 +44,12 @@
     "lint": "biome check --apply-unsafe .",
     "fmt": "biome format . --write",
     "test": "node --import=tsx/esm --test ./test/colorize.test.ts",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.2.2",
     "@types/node": "^20.6.2",
-    "husky": "^8.0.3",
+    "husky": "^9.0.10",
     "nano-staged": "^0.8.0",
     "pkgroll": "^2.0.1",
     "tsx": "^4.7.0",
