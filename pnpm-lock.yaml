@@ -10,7 +10,7 @@ devDependencies:
     version: 1.5.3
   '@types/node':
     specifier: ^20.11.16
-    version: 20.11.16
+    version: 20.11.30
   husky:
     specifier: ^9.0.10
     version: 9.0.10
@@ -636,8 +636,8 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
-  /@types/node@20.11.16:
-    resolution: {integrity: sha512-gKb0enTmRCzXSSUJDq6/sPcqrfCv2mkkG6Jt/clpn5eiCbKTY+SgZUxo+p8ZKMof5dCp9vHQUAB7wOUTod22wQ==}
+  /@types/node@20.11.30:
+    resolution: {integrity: sha512-dHM6ZxwlmuZaRmUPfv1p+KrdD1Dci04FbdEm/9wEMouFqxYoFl5aMkt0VMAUtYRQDyYvD41WJLukhq/ha3YuTw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
