@@ -2,15 +2,14 @@
 
 ![npm](https://img.shields.io/npm/v/colorize-node)
 ![node-current](https://img.shields.io/node/v/colorize-node)
-![npm package minimized gzipped size (select exports)](https://img.shields.io/bundlejs/size/colorize-node?exports=colorize)
+![npm package minimized gzipped size (select exports)](https://deno.bundlejs.com/?q=colorize-node&badge=detailed)
 
 > A lightweight library to color Node.js terminal output.
 
-- Zero dependencies
-- TypeScript support
-- Node >= 18.12.0
-- ESM bundle size: 193 bytes (minified & gzipped)
-- CJS bundle size: 200 bytes (minified & gzipped)
+- ✅ Zero dependencies
+- ✅ TypeScript support
+- ✅ Node.js v18.12.0+ support
+- ✅ **3x** smaller then `picocolors`
 
 ## Installation
 
