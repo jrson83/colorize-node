@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.5.2 - 2024-05-22
+
+- update dependencies
+
 ## v0.5.1 - 2024-03-29
 
 - update dependencies
