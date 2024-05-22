@@ -1,12 +1,14 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "ignore": ["dist", "node_modules"]
+  },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
     "indentWidth": 2,
     "indentStyle": "space",
-    "lineWidth": 80,
-    "ignore": ["dist", "node_modules"]
+    "lineWidth": 80
   },
   "javascript": {
     "formatter": {
@@ -18,18 +20,10 @@
   },
   "linter": {
     "enabled": true,
-    "ignore": ["dist", "node_modules"],
     "rules": {
       "recommended": true,
-      "a11y": {
-        "useKeyWithClickEvents": "off"
-      },
       "correctness": {
         "noVoidTypeReturn": "off"
-      },
-      "suspicious": {
-        "noExplicitAny": "off",
-        "noArrayIndexKey": "off"
       },
       "style": {
         "all": false

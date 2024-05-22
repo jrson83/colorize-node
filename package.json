@@ -40,8 +40,8 @@
   "scripts": {
     "clean": "rm -rf dist",
     "dev": "tsx src/index.ts",
-    "build": "pkgroll --target=node18.12.0 --minify",
-    "lint": "biome check --apply-unsafe .",
+    "build": "pkgroll --clean-dist --target=node18.12.0 --minify",
+    "lint": "biome lint --apply .",
     "fmt": "biome format . --write",
     "test": "node --import=tsx/esm --test ./test/colorize.test.ts",
     "quality-check": "pnpm lint && pnpm fmt && pnpm build && pnpm test",
@@ -57,14 +57,13 @@
     "typescript": "^5.4.3"
   },
   "engines": {
-    "node": ">=18.12.0",
-    "pnpm": ">=8.12.0"
+    "node": ">=18.12.0"
   },
   "publishConfig": {
     "access": "public"
   },
   "nano-staged": {
-    "*.ts": "biome check --apply-unsafe .",
+    "*.ts": "biome lint --apply .",
     "*": "biome format . --write"
   }
 }
